@@ -12,7 +12,7 @@ namespace GreedyBFSLabirynth
         public void mostrarMenu()
         {
             int opc = 0;
-            
+            //prueba
 
             do
             {
