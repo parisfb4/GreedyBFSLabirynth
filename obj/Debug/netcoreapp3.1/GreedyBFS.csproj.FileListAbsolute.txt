@@ -1,0 +1,13 @@
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\bin\Debug\netcoreapp3.1\GreedyBFS.exe
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\bin\Debug\netcoreapp3.1\GreedyBFS.deps.json
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\bin\Debug\netcoreapp3.1\GreedyBFS.runtimeconfig.json
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\bin\Debug\netcoreapp3.1\GreedyBFS.runtimeconfig.dev.json
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\bin\Debug\netcoreapp3.1\GreedyBFS.dll
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\bin\Debug\netcoreapp3.1\GreedyBFS.pdb
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\obj\Debug\netcoreapp3.1\GreedyBFS.csprojAssemblyReference.cache
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\obj\Debug\netcoreapp3.1\GreedyBFS.AssemblyInfoInputs.cache
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\obj\Debug\netcoreapp3.1\GreedyBFS.AssemblyInfo.cs
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\obj\Debug\netcoreapp3.1\GreedyBFS.csproj.CoreCompileInputs.cache
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\obj\Debug\netcoreapp3.1\GreedyBFS.dll
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\obj\Debug\netcoreapp3.1\GreedyBFS.pdb
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\obj\Debug\netcoreapp3.1\GreedyBFS.genruntimeconfig.cache
