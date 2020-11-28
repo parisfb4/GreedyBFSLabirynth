@@ -28,7 +28,7 @@ namespace GreedyBFSLabirynth
                 {
                     case 1:
                         timerMeasure.Start();
-                        Amplitud();
+                        BestFirstSearch();
                         Console.WriteLine($"Tiempo: " + timerMeasure.Elapsed.Minutes + ":" + timerMeasure.Elapsed.Seconds + " segundos");
                         break;
                     case 4:
@@ -41,7 +41,7 @@ namespace GreedyBFSLabirynth
 
             } while (opc != 4);
         }
-        public void Amplitud()
+        public void BestFirstSearch()
         {
             //Puzzle Inicial
 
@@ -63,33 +63,6 @@ namespace GreedyBFSLabirynth
             {
                 Console.WriteLine("No hay solución para este problema");
             }
-        }
-
-        public int[] generarPuzzleAleatorio()
-        {
-            int space = 9;
-            Random rnd = new Random();
-            //int[] number = { 0, 1, 2, 3, 4, 5, 6, 7, 8};
-            List<int> numbersChosen = new List<int>();
-            int[] tablero = new int[space];
-
-            int posible;
-            for (int i = 0; i < space; ++i)
-            {
-
-                posible = rnd.Next(9);
-                while (numbersChosen.Contains(posible))
-                {
-
-
-                    posible = rnd.Next(9);
-                }
-                tablero[i] = posible;
-                numbersChosen.Add(posible);
-            }
-
-
-            return tablero;
         }
     }
 }
