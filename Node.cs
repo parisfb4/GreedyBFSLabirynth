@@ -11,7 +11,9 @@ namespace GreedyBFSLabirynth
         private Node parent;                                    //Nodo padre
         private int[,] puzzle = new int[200, 200];                      //Arreglo del puzzle, o estructura actual
         private int x = 0;                                      //Indicador de posicion del 0
-        private int cols, rows;                                    //Posiciones del puzzle que es 3 x 3
+        private int cols, rows, finalCol, finalRow;
+        private double peso;
+        //Posiciones del puzzle que es 3 x 3
 
         //Posición (x,y) del agente en la matriz de números
         private int posRow;
@@ -22,13 +24,20 @@ namespace GreedyBFSLabirynth
         internal List<Node> Children { get => children; set => children = value; }
         internal Node Parent { get => parent; set => parent = value; }
         public int Cols { get => cols; set => cols = value; }
+        public int Rows { get => rows; set => rows = value; }
+        public int FinalRow { get => finalRow; set => finalRow = value; }
+        public int FinalCol { get => finalCol; set => finalCol = value; }
+        public double Peso { get => peso; set => peso = value; }
         #endregion
 
         #region Constructor
-        public Node(int[,] value, int rows, int cols)
+        public Node(int[,] value, int rows, int cols, int finalcol, int finalrow)
         {
             this.rows = rows;
             this.cols = cols;
+            this.finalCol = finalcol;
+            this.finalRow = finalrow;
+
             SetPuzzle(value); //Establecer el puzzle actual
             asignPosition();
         }
@@ -82,15 +91,12 @@ namespace GreedyBFSLabirynth
         //Funcion para verificar que la meta no ha llegado al final o si
         public bool GoalTest()
         {
-            for (int i = 0; i < rows; i++)
+            if(posRow == finalRow && posCol == finalCol)
+                return true;
+            else
             {
-                for (int j = 0; j < cols; j++)
-                {
-                    if (puzzle[i, j] == 2) return false;
-                }
-
+                return false;
             }
-            return true;
 
         }
 
@@ -123,6 +129,11 @@ namespace GreedyBFSLabirynth
             }
         }
 
+        private void getDistanceToGoal()
+        {
+
+            this.peso = Math.Sqrt(Math.Pow((this.finalRow - this.posRow),2)+ Math.Pow((this.finalCol - this.posCol),2));
+        }
         public bool IsSamePuzzle(int[,] p)
         {
             bool samePuzzle = true;
@@ -156,11 +167,12 @@ namespace GreedyBFSLabirynth
                 else if (puzzle[row, col + 1] == 3)
                 {
                     puzzle_auxiliar[row, col] = 0;
-                    puzzle_auxiliar[row, col + 1] = 3;
+                    puzzle_auxiliar[row, col + 1] = 2;
                 }
                 else return;
 
-                Node child = new Node(puzzle_auxiliar, rows, cols);
+                Node child = new Node(puzzle_auxiliar, rows, cols, this.finalCol, this.finalRow);
+                child.getDistanceToGoal();
                 children.Add(child);
                 child.parent = this;
 
@@ -183,10 +195,11 @@ namespace GreedyBFSLabirynth
                 else if (puzzle[row, col - 1] == 3)
                 {
                     puzzle_auxiliar[row, col] = 0;
-                    puzzle_auxiliar[row, col - 1] = 3;
+                    puzzle_auxiliar[row, col - 1] = 2;
                 }
                 else return;
-                Node child = new Node(puzzle_auxiliar, rows, cols);
+                Node child = new Node(puzzle_auxiliar, rows, cols, this.finalCol, this.finalRow);
+                child.getDistanceToGoal();
                 children.Add(child);
                 child.parent = this;
 
@@ -208,10 +221,11 @@ namespace GreedyBFSLabirynth
                 else if (puzzle[row - 1, col] == 3)
                 {
                     puzzle_auxiliar[row, col] = 0;
-                    puzzle_auxiliar[row - 1, col] = 3;
+                    puzzle_auxiliar[row - 1, col] = 2;
                 }
                 else return;
-                Node child = new Node(puzzle_auxiliar, rows, cols);
+                Node child = new Node(puzzle_auxiliar, rows, cols, this.finalCol, this.finalRow);
+                child.getDistanceToGoal();
                 children.Add(child);
                 child.parent = this;
 
@@ -233,10 +247,11 @@ namespace GreedyBFSLabirynth
                 else if (puzzle[row + 1, col] == 3)
                 {
                     puzzle_auxiliar[row, col] = 0;
-                    puzzle_auxiliar[row + 1, col] = 3;
+                    puzzle_auxiliar[row + 1, col] = 2;
                 }
                 else return;
-                Node child = new Node(puzzle_auxiliar, rows, cols);
+                Node child = new Node(puzzle_auxiliar, rows, cols, this.finalCol, this.finalRow);
+                child.getDistanceToGoal();
                 children.Add(child);
                 child.parent = this;
 

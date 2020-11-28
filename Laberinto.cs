@@ -7,7 +7,9 @@ namespace GreedyBFSLabirynth
     class Laberinto
     {
         int ROWS; // Número de filas del laberinto dadas por el txt
-        int COLS; // Número de columnas del laberinto dadas por el txt
+        int COLS;
+        int FINALCOLS;
+        int FINALROWS;// Número de columnas del laberinto dadas por el txt
         int[,] Matrix = new int[200, 200]; // Tablero límite del txt es 200 por 200
         public Laberinto()
         {
@@ -20,6 +22,13 @@ namespace GreedyBFSLabirynth
         public int getCols()
         {
             return COLS;
+        }public int getColsFinal()
+        {
+            return FINALCOLS;
+        }
+        public int getRowsFinal()
+        {
+            return FINALROWS;
         }
         public int[,] getMatrix()
         {
@@ -46,6 +55,11 @@ namespace GreedyBFSLabirynth
                         {
                             string a = line[k].ToString();
                             Matrix[counterRows, k] = Int32.Parse(a);
+                            if (Int32.Parse(a) == 3)
+                            {
+                                this.FINALCOLS = k;
+                                this.FINALROWS = counterRows;
+                            }
                         }
 
                     }

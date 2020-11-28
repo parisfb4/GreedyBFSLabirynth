@@ -19,9 +19,7 @@ namespace GreedyBFSLabirynth
                 
                 lab.Readlabyrinth(); //Lectura del archivo .txt para agregarlo a nuestra matriz
                 Console.WriteLine(" \tLaberinto - Algoritmos de búsqueda\n" +
-                    "1) Amplitud\n" +
-                    "2) Profundidad\n" +
-                    "3) Profundidad iterativa\n" +
+                    "1) Primero el mejor\n" +
                     "4) Salir");
                 opc = Convert.ToInt16(Console.ReadLine());
                 Stopwatch timerMeasure = new Stopwatch();
@@ -31,16 +29,6 @@ namespace GreedyBFSLabirynth
                     case 1:
                         timerMeasure.Start();
                         Amplitud();
-                        Console.WriteLine($"Tiempo: " + timerMeasure.Elapsed.Minutes + ":" + timerMeasure.Elapsed.Seconds + " segundos");
-                        break;
-                    case 2:
-                        timerMeasure.Start();
-                        Profundidad();
-                        Console.WriteLine($"Tiempo: " + timerMeasure.Elapsed.Minutes + ":" + timerMeasure.Elapsed.Seconds + " segundos");
-                        break;
-                    case 3:
-                        timerMeasure.Start();
-                        ProfundidadIterativa();
                         Console.WriteLine($"Tiempo: " + timerMeasure.Elapsed.Minutes + ":" + timerMeasure.Elapsed.Seconds + " segundos");
                         break;
                     case 4:
@@ -59,55 +47,10 @@ namespace GreedyBFSLabirynth
 
 
 
-            Node root = new Node(lab.getMatrix(), lab.getRows(), lab.getCols());   //Envia el puzzle inicial a la clase
+            Node root = new Node(lab.getMatrix(), lab.getRows(), lab.getCols(), lab.getColsFinal(), lab.getRowsFinal());   //Envia el puzzle inicial a la clase
             UninformedSearch ui = new UninformedSearch();
 
             List<Node> solution = ui.BreadthFirstSearch(root);
-            if (solution.Count > 0)
-            {
-                Console.WriteLine("Solución encontrada");
-                for (int i = 0; i < solution.Count; i++)
-                {
-                    solution[i].PrintPuzzle();
-                }
-            }
-            else
-            {
-                Console.WriteLine("No hay solución para este problema");
-            }
-        }
-        public void Profundidad()
-        {
-            //Puzzle Inicial
-            Node root = new Node(lab.getMatrix(), lab.getRows(), lab.getCols());   //Envia el puzzle inicial a la clase
-            //int[] puzzle_initial = {0,1,2,3,5,4,6,7,8};            
-            UninformedSearch ui = new UninformedSearch();
-
-            List<Node> solution = ui.DeepFirstSearch(root);
-            if (solution.Count > 0)
-            {
-                Console.WriteLine("Solución encontrada");
-                for (int i = 0; i < solution.Count; i++)
-                {
-                    solution[i].PrintPuzzle();
-                }
-            }
-            else
-            {
-                Console.WriteLine("No hay solución para este problema");
-            }
-        }
-
-        //Profundidad Interativa
-        public void ProfundidadIterativa()
-        {
-            //Puzzle Inicial
-            Node root = new Node(lab.getMatrix(), lab.getRows(), lab.getCols());   //Envia el puzzle inicial a la clase
-            //int[] puzzle_initial = { 1, 0, 2, 3, 5, 6, 4, 7, 8 };
-                        
-            UninformedSearch ui = new UninformedSearch();
-
-            List<Node> solution = ui.DeepFirstSearchIterative(root);
             if (solution.Count > 0)
             {
                 Console.WriteLine("Solución encontrada");
