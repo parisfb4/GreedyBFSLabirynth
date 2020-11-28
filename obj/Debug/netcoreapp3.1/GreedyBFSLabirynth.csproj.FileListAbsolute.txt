@@ -10,3 +10,16 @@ C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\obj\Debug\
 C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\obj\Debug\netcoreapp3.1\GreedyBFSLabirynth.dll
 C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\obj\Debug\netcoreapp3.1\GreedyBFSLabirynth.pdb
 C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFS\obj\Debug\netcoreapp3.1\GreedyBFSLabirynth.genruntimeconfig.cache
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFSLabirynth\bin\Debug\netcoreapp3.1\GreedyBFSLabirynth.exe
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFSLabirynth\bin\Debug\netcoreapp3.1\GreedyBFSLabirynth.deps.json
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFSLabirynth\bin\Debug\netcoreapp3.1\GreedyBFSLabirynth.runtimeconfig.json
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFSLabirynth\bin\Debug\netcoreapp3.1\GreedyBFSLabirynth.runtimeconfig.dev.json
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFSLabirynth\bin\Debug\netcoreapp3.1\GreedyBFSLabirynth.dll
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFSLabirynth\bin\Debug\netcoreapp3.1\GreedyBFSLabirynth.pdb
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFSLabirynth\obj\Debug\netcoreapp3.1\GreedyBFSLabirynth.csprojAssemblyReference.cache
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFSLabirynth\obj\Debug\netcoreapp3.1\GreedyBFSLabirynth.AssemblyInfoInputs.cache
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFSLabirynth\obj\Debug\netcoreapp3.1\GreedyBFSLabirynth.AssemblyInfo.cs
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFSLabirynth\obj\Debug\netcoreapp3.1\GreedyBFSLabirynth.csproj.CoreCompileInputs.cache
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFSLabirynth\obj\Debug\netcoreapp3.1\GreedyBFSLabirynth.dll
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFSLabirynth\obj\Debug\netcoreapp3.1\GreedyBFSLabirynth.pdb
+C:\Users\paris\OneDrive - Universidad de Guadalajara\Uni\IA\GreedyBFSLabirynth\obj\Debug\netcoreapp3.1\GreedyBFSLabirynth.genruntimeconfig.cache
