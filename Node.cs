@@ -13,6 +13,8 @@ namespace GreedyBFSLabirynth
         private int x = 0;                                      //Indicador de posicion del 0
         private int cols, rows, finalCol, finalRow;
         private double peso;
+        private double g = 1;                                      //Coste del puzzle g(n)
+        private double f;                                          //Evaluacion de rendimiento -> F = g + h
         //Posiciones del puzzle que es 3 x 3
 
         //Posición (x,y) del agente en la matriz de números
@@ -28,6 +30,8 @@ namespace GreedyBFSLabirynth
         public int FinalRow { get => finalRow; set => finalRow = value; }
         public int FinalCol { get => finalCol; set => finalCol = value; }
         public double Peso { get => peso; set => peso = value; }
+        public double G { get => g; set => g = value; }
+        public double F { get => f; set => f = value; }
         #endregion
 
         #region Constructor
@@ -173,6 +177,7 @@ namespace GreedyBFSLabirynth
 
                 Node child = new Node(puzzle_auxiliar, rows, cols, this.finalCol, this.finalRow);
                 child.getDistanceToGoal();
+                child.F = child.G + child.Peso;
                 children.Add(child);
                 child.parent = this;
 
@@ -200,6 +205,7 @@ namespace GreedyBFSLabirynth
                 else return;
                 Node child = new Node(puzzle_auxiliar, rows, cols, this.finalCol, this.finalRow);
                 child.getDistanceToGoal();
+                child.F = child.G + child.Peso;
                 children.Add(child);
                 child.parent = this;
 
@@ -226,6 +232,7 @@ namespace GreedyBFSLabirynth
                 else return;
                 Node child = new Node(puzzle_auxiliar, rows, cols, this.finalCol, this.finalRow);
                 child.getDistanceToGoal();
+                child.F = child.G + child.Peso;
                 children.Add(child);
                 child.parent = this;
 
@@ -252,6 +259,7 @@ namespace GreedyBFSLabirynth
                 else return;
                 Node child = new Node(puzzle_auxiliar, rows, cols, this.finalCol, this.finalRow);
                 child.getDistanceToGoal();
+                child.F = child.G + child.Peso;
                 children.Add(child);
                 child.parent = this;
 

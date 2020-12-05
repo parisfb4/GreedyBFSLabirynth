@@ -15,16 +15,16 @@ namespace GreedyBFSLabirynth
         //Encontrar el mas pequeno y que no este en la lista cerrada
         public Node LowestNode(List<Node> closedList, Node currentNode)
         {
-            List<Node> sortedList = currentNode.GetChildren().OrderBy(nodo => nodo.Peso).ToList();
+            List<Node> sortedList = currentNode.GetChildren().OrderBy(nodo => nodo.F).ToList();
 
 
             Console.WriteLine("Lista Ordenada");
             for(int i = 0; i < sortedList.Count; i++)
             {
-                Console.WriteLine("Puzzle");
+                Console.WriteLine("Laberinto");
                 sortedList[i].PrintPuzzle();
-                Console.WriteLine("Peso");
-                Console.WriteLine(sortedList[i].Peso);
+                Console.WriteLine("F");
+                Console.WriteLine(sortedList[i].F);
             }
 
             for(int i = 0; i < sortedList.Count; i++)

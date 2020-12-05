@@ -19,7 +19,7 @@ namespace GreedyBFSLabirynth
                 
                 lab.Readlabyrinth(); //Lectura del archivo .txt para agregarlo a nuestra matriz
                 Console.WriteLine(" \tLaberinto - Algoritmos de búsqueda\n" +
-                    "1) Primero el mejor\n" +
+                    "1) A*\n" +
                     "4) Salir");
                 opc = Convert.ToInt16(Console.ReadLine());
                 Stopwatch timerMeasure = new Stopwatch();
@@ -30,6 +30,8 @@ namespace GreedyBFSLabirynth
                         timerMeasure.Start();
                         BestFirstSearch();
                         Console.WriteLine($"Tiempo: " + timerMeasure.Elapsed.Minutes + ":" + timerMeasure.Elapsed.Seconds + " segundos");
+                        timerMeasure.Stop();
+                        timerMeasure.Restart();
                         break;
                     case 4:
                         Console.WriteLine("Adios");
